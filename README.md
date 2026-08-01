@@ -37,6 +37,7 @@ Every week, knowledge workers waste \*\*30-60 minutes\*\* scanning through dozen
 
 
 \## 🏗️ Architecture
+┌─────────────────┐ ┌──────────────────┐ ┌─────────────────┐ │ EventBridge │────▶│ Feed Collector │────▶│ DynamoDB │ │ (Weekly Cron) │ │ (Lambda) │ │ (Raw Items) │ └─────────────────┘ └──────────────────┘ └────────┬────────┘ │ ▼ ┌─────────────────┐ ┌──────────────────┐ ┌─────────────────┐ │ S3 Static Site │◀────│ Digest Delivery │◀────│ AI Summarizer │ │ (Frontend) │ │ (Lambda + SES) │ │ (Lambda+Bedrock)│ └─────────────────┘ └──────────────────┘ └─────────────────┘
 
 
 
