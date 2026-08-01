@@ -1,0 +1,81 @@
+
+<!-- File: frontend/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartDigest AI — Weekly Intelligence Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <h1>🧠 SmartDigest AI</h1>
+                <p class="subtitle">Your Weekly Intelligence Brief — Powered by Amazon Bedrock</p>
+            </div>
+            <button id="refreshBtn" class="btn-primary">🔄 Generate Now</button>
+        </header>
+
+        <!-- Stats Bar -->
+        <div class="stats-bar" id="statsBar">
+            <div class="stat-card">
+                <span class="stat-number" id="totalArticles">—</span>
+                <span class="stat-label">Articles Processed</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-number high" id="highCount">—</span>
+                <span class="stat-label">🔴 Must Read</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-number medium" id="mediumCount">—</span>
+                <span class="stat-label">🟡 Worth Knowing</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-number low" id="lowCount">—</span>
+                <span class="stat-label">🟢 Optional</span>
+            </div>
+        </div>
+
+        <!-- Feed Management -->
+        <section class="section">
+            <h2>📡 Manage Your Feeds</h2>
+            <div class="feed-input-group">
+                <input type="url" id="feedUrl" placeholder="Enter RSS feed URL..." class="input-field">
+                <select id="feedCategory" class="select-field">
+                    <option value="tech">Technology</option>
+                    <option value="business">Business</option>
+                    <option value="science">Science</option>
+                    <option value="ai">AI & ML</option>
+                    <option value="news">News</option>
+                    <option value="dev">Development</option>
+                </select>
+                <button id="addFeedBtn" class="btn-primary">+ Add Feed</button>
+            </div>
+            <div id="feedsList" class="feeds-list">
+                <!-- Feeds will be populated here -->
+            </div>
+        </section>
+
+        <!-- Digest Content -->
+        <section class="section">
+            <h2>📋 Latest Digest</h2>
+            <div id="digestContent" class="digest-content">
+                <div class="empty-state">
+                    <p>🚀 Add some RSS feeds above and click "Generate Now" to create your first digest!</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>Built with ❤️ using Amazon Bedrock, AWS Lambda, DynamoDB & S3</p>
+            <p>AWS Weekend Annoying Task Challenge 2026</p>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

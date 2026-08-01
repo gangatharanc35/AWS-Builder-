@@ -1,0 +1,4 @@
+
+# File: backend/lambda_functions/feed_collector/requirements.txt
+feedparser==6.0.11
+boto3>=1.28.0
