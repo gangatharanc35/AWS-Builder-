@@ -8,12 +8,6 @@
 
 
 
-!\[AWS](https://img.shields.io/badge/AWS-Free%20Tier-orange)
-
-!\[Python](https://img.shields.io/badge/Python-3.12-blue)
-
-!\[Status](https://img.shields.io/badge/Status-Live-green)
-
 
 
 \## 🎯 The Problem
